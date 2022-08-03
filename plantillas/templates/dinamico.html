@@ -10,13 +10,18 @@
     <h1>Hola {{name}}</h1>
     <h3>Categorias</h3>
     <u>
+    {% comment "" %}
+        Recorremos las categorias con un ciclo for.
+        En caso de ser code, la categoria se muestra en negrita.
+    {% endcomment %}
         {% for cat in categories %}
             {% if cat == 'code' %}
-            <li><b>{{ cat }}</b></li>
+            <li><b>{{ cat|upper }}</b></li>
             {% else %}
                 <li>{{ cat }}</li>
             {% endif %}
         {% endfor %}
+        <h5>Total de categorias: {{categories|length}}</h5>
     </u>
 </body>
 </html>
