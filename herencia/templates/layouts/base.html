@@ -10,21 +10,12 @@
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Herencia</a></li>
-            <li><a href="#">Ejemplo</a></li>
-            <li><a href="#">Otra</a></li>
-        </ul>
-
-    </nav>
+    {% include 'layouts/partials/menu.html' %}
     <main>
         {% block content %}{% endblock content %}
     </main>
-    <footer>
-        <p>Todos los derechos reservados</p>
-    </footer>
+    
     {% block scripts %}{% endblock scripts %}
-
+    {% include 'layouts/partials/footer.html' %}
 </body>
 </html>
